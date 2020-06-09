@@ -12,7 +12,7 @@ function getDogImages() {
 
 function generateResults(responseJson) {
   const dogPics = [];
-  for (let i; i<responseJson.length; i++) {
+  for (let i = 0; i<responseJson.message.length; i++) {
     dogPics.push(`<img src="${responseJson.message[i]}" class="results-img"></img>`);
   }
   return dogPics;
