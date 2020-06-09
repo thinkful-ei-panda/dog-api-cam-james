@@ -19,10 +19,8 @@ function generateResults(responseJson) {
 }
 
 function displayResults(responseJson) {
-  console.log(responseJson);
   //replace the existing image with the new ones
   const html = generateResults(responseJson).join('');
-  console.log(html);
   $('#doggos').html(html);
   //display the results section
   $('.results').removeClass('hidden');
@@ -36,6 +34,5 @@ function watchForm() {
 }
 
 $(function() {
-  console.log('App loaded! Waiting for submit!');
   watchForm();
 });
